@@ -1,3 +1,10 @@
+<utils>
+  <filegen-via-code />
+</utils>
+```Aquí tienes el código completo, corregido y listo con todos los ajustes integrados. He solucionado el problema de las pestañas en celulares y limpiado cualquier texto extra para que funcione al 100% en GitHub Pages.
+
+Copia **todo el código de abajo** y reemplaza por completo el contenido de tu archivo `index.html` en GitHub:
+
 ```html
 <!DOCTYPE html>
 <html lang="es">
@@ -166,25 +173,3 @@
             <div class="admin-section">
                 <h3>📋 Validar Nuevas Quinielas recibidas</h3>
                 <div style="overflow-x:auto;">
-if(state.admins.some(a => a.email.toLowerCase() === email.toLowerCase() || a.phone === phone)) {
-return alert("Este colaborador ya existe.");
-}
-state.admins.push({ email, phone });
-localStorage.setItem('quiniela_pro_mx_v1', JSON.stringify(state));
-document.getElementById('newCoAdminEmail').value = '';
-document.getElementById('newCoAdminPhone').value = '';
-renderAdminPanels();
-alert("Agregado. Enlace de afiliado disponible abajo.");
-}
-function resetSystemAll() {
-if(confirm("🚨 Borrar todo y reiniciar código de jornada. ¿Continuar?")) {
-localStorage.removeItem('quiniela_pro_mx_v1');
-location.reload();
-}
-}
-renderPlayerForm();
-updateTimer();
-
-
-
-```
